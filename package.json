@@ -13,7 +13,9 @@
     "migrate": "drizzle-kit generate:sqlite",
     "studio": "drizzle-kit studio",
     "download:repo": "cd template && jiti downloadRepo",
+    "download:ui": "cd template && jiti downloadUI",
     "parse:repo": "jiti template/shadcn-vue/parseMeta",
+    "parse:ui": "jiti template/nuxt-ui/parseMeta",
     "analyze": "nuxt analyze"
   },
   "dependencies": {
