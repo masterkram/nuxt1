@@ -2,8 +2,5 @@
 </script>
 
 <template>
-  <svg width="100%" height="100%" viewBox="0 0 197 197" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path class="scale-100 group-hover:scale-125 origin-center transition duration-500" d="M159 85.5C159 119.466 131.466 147 97.5 147C63.5345 147 36 119.466 36 85.5C36 51.5345 63.5345 24 97.5 24C131.466 24 159 51.5345 159 85.5Z" fill="#262626" />
-    <path d="M180.939 32.8358L98.0596 176.356L15.18 32.8358H82.2288L96.4718 57.3807L98.0596 60.1169L99.6474 57.3806L113.89 32.8358H180.939ZM96.474 121.356L98.0604 124.074L99.6455 121.355L134.814 61.0279L136.423 58.2676H133.228H101.457H100.452L99.9102 59.1153L98.051 62.0264L96.1663 59.1076L95.6239 58.2676H94.6241H62.8538H59.657L61.2683 61.0287L96.474 121.356Z" fill="white" stroke="#262626" stroke-width="3.67152" />
-  </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="#3b82f6" stroke-linejoin="round" stroke-width="2"><path stroke-linecap="round" d="M11.029 2.54a2 2 0 0 1 1.942 0l7.515 4.174a1 1 0 0 1 .514.874v8.235a2 2 0 0 1-1.029 1.749l-7 3.888a2 2 0 0 1-1.942 0l-7-3.889A2 2 0 0 1 3 15.824V7.588a1 1 0 0 1 .514-.874z" /><path stroke-linecap="round" d="m7.5 4.5l9 5V13M6 12.328L9 14" /><path d="m3 7l9 5m0 0l9-5m-9 5v9.5" /></g></svg>
 </template>
