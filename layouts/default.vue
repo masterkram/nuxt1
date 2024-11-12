@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { GithubLogoIcon } from '@radix-icons/vue'
+
+const nuxtUi = ref(true)
 </script>
 
 <template>
   <div>
-    <div class="w-full h-full flex flex-col items-center justify-center ">
+    <div class="w-full h-full flex flex-col items-center justify-center">
       <header class="sticky top-0 flex p-2 md:p-4 w-full z-10">
         <NuxtLink to="/" class="group h-10 flex items-center gap-1 text-xl md:text-3xl font-black">
           <Logo />
@@ -14,11 +16,11 @@ import { GithubLogoIcon } from '@radix-icons/vue'
         <div class="mx-auto" />
 
         <div class="flex items-center gap-2">
-          <div>
-            <UiSwitch />
+          <div class="flex gap-4">
+            <UiSwitch v-model="nuxtUi" />
             <UiLabel>Nuxt UI</UiLabel>
           </div>
-          <UiButton as-child class="flex-shrink-0 bg-white" variant="outline">
+          <UiButton as-child class="flex-shrink-0" variant="outline">
             <NuxtLink to="https://github.com/masterkram/nuxt1" target="_blank">
               <GithubLogoIcon class="mr-1" />
               <span>GitHub</span>

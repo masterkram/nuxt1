@@ -2,10 +2,12 @@
 </script>
 
 <template>
-  <UiTooltipProvider>
-    <NuxtLoadingIndicator color="hsl(var(--primary))" />
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
-  </UiTooltipProvider>
+  <Body class="dark">
+    <UiTooltipProvider>
+      <NuxtLoadingIndicator color="hsl(var(--primary))" />
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
+    </UiTooltipProvider>
+  </Body>
 </template>
