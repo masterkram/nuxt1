@@ -2,6 +2,11 @@
 import { GithubLogoIcon } from '@radix-icons/vue'
 
 const nuxtUi = ref(true)
+
+function handleUiKitChange(value: any) {
+  console.log('update')
+  nuxtUi.value = value
+}
 </script>
 
 <template>
@@ -16,11 +21,7 @@ const nuxtUi = ref(true)
         <div class="mx-auto" />
 
         <div class="flex items-center gap-2">
-          <div class="flex gap-4">
-            <UiSwitch v-model="nuxtUi" />
-            <UiLabel>Nuxt UI</UiLabel>
-          </div>
-          <UiButton as-child class="flex-shrink-0" variant="outline">
+          <UiButton as-child class="ml-4 flex-shrink-0" variant="outline">
             <NuxtLink to="https://github.com/masterkram/nuxt1" target="_blank">
               <GithubLogoIcon class="mr-1" />
               <span>GitHub</span>
