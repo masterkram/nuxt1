@@ -28,10 +28,10 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@vueuse/nuxt',
     'shadcn-nuxt',
-    '@nuxtjs/google-fonts',
     'nuxt-auth-utils',
-    '@nuxtseo/module',
+    '@nuxtjs/seo',
     '@nuxt/content',
+    '@nuxt/fonts',
   ],
   extends: ['nuxt-umami'],
   appConfig: {
