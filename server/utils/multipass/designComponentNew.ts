@@ -3,6 +3,9 @@ import { z } from 'zod'
 import { zodToJsonSchema } from 'zod-to-json-schema'
 import type { OpenAI } from 'openai'
 
+const nuxtUI = true
+const meta = nuxtUI ? '@template/nuxt-ui/metadata.json' : '@/template/shadcn-vue/metadata.json'
+
 declare module 'h3' {
   interface NodeIncomingMessage {
     componentDesignTask: {

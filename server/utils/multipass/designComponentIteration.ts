@@ -3,11 +3,14 @@ import { z } from 'zod'
 import { zodToJsonSchema } from 'zod-to-json-schema'
 import type { OpenAI } from 'openai'
 
+const nuxtUI = true
+const meta = nuxtUI ? '@template/nuxt-ui/metadata.json' : '@/template/shadcn-vue/metadata.json'
+
 export default async (event: H3Event<EventHandlerRequest>, component: DBComponent) => {
   console.log('> init : design component iteration')
   const { prompt } = await readBody(event)
 
-  const components = (await import('@/template/shadcn-vue/metadata.json')).default
+  const components = (await import(meta)).default
   const functionSchema = z.object({
     new_component_description: z.string().describe(`Write a description for Vue component design task based on the user query. Stick strictly to what the user wants in their request - do not go off track`),
     use_library_components: z.array(z.object({

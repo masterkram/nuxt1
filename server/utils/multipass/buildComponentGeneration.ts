@@ -1,5 +1,10 @@
 import type { EventHandlerRequest, H3Event } from 'h3'
 import type { OpenAI } from 'openai'
+import type LibraryComponent from '../../types/LibraryComponent'
+import type LibraryExample from '~/server/types/LibraryExample'
+
+const nuxtUI = true
+const meta = nuxtUI ? '@template/nuxt-ui/metadata.json' : '@/template/shadcn-vue/metadata.json'
 
 declare module 'h3' {
   interface NodeIncomingMessage {
@@ -11,13 +16,13 @@ export default async (event: H3Event<EventHandlerRequest>) => {
   console.log('> init : building component generation')
   const TOKEN_LIMIT = 600
   const componentDesignTask = event.node.req.componentDesignTask
-  const components = (await import('@/template/shadcn-vue/metadata.json')).default
+  const components = (await import(meta)).default
 
-  const retrievedComponent = components.filter(i => componentDesignTask.components.find(j => j.name === i.name))
+  const retrievedComponent = components.filter((i: LibraryComponent) => componentDesignTask.components.find(j => j.name === i.name))
 
   const encoder = encoding()
-  const mappedComponent = retrievedComponent.map((component) => {
-    const componentExamples = [...component.examples]
+  const mappedComponent = retrievedComponent.map((component: LibraryComponent) => {
+    const componentExamples: LibraryExample[] = component.examples ? [...component.examples] : []
     const examples: typeof componentExamples = []
     let totalTokens = 0
 
