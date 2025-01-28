@@ -1,7 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  future: { compatibilityVersion: 4 },
   // devtools totally broken, not sure why
-  devtools: { enabled: false },
+  devtools: { enabled: true },
   app: {
     head: {
       link: [{ rel: 'icon', type: 'image/svg', href: '/logo.svg' }],

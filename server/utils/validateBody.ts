@@ -18,7 +18,6 @@ export async function validateBody<T, U>(event: H3Event<EventHandlerRequest>, va
 
 export async function validateUser(event: H3Event<EventHandlerRequest>) {
   const session = await getUserSession(event)
-  // @ts-expect-error user session types
   if (!session.user?.id) {
     throw createError({
       statusCode: 400,
